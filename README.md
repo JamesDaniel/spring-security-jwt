@@ -9,5 +9,5 @@ User the insomnia rest client collection in `docs/` . The default user is `carol
 ## References
 
  - https://app.pluralsight.com/library/courses/securing-spring-data-rest-apis/table-of-contents
- 
+ - https://github.com/jzheaux/resolutions
   
