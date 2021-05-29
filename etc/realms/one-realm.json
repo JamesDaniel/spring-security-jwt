@@ -713,31 +713,91 @@
       "protocolMappers": [
         {
           "id": "2cf3eaa6-dd41-4b02-bc06-cbed4447f8bc",
-          "name": "tenant_id",
+          "name": "tid",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usermodel-attribute-mapper",
           "consentRequired": false,
           "config": {
             "userinfo.token.claim": "true",
-            "user.attribute": "tenant_id",
+            "user.attribute": "tid",
             "id.token.claim": "true",
             "access.token.claim": "true",
-            "claim.name": "tenant_id",
+            "claim.name": "tid",
             "jsonType.label": "String"
           }
         },
         {
           "id": "ecd91b4d-95d7-4853-95bb-1e8e357606a2",
-          "name": "user_id",
+          "name": "oid",
           "protocol": "openid-connect",
           "protocolMapper": "oidc-usermodel-attribute-mapper",
           "consentRequired": false,
           "config": {
             "userinfo.token.claim": "true",
-            "user.attribute": "user_id",
+            "user.attribute": "oid",
             "id.token.claim": "true",
             "access.token.claim": "true",
-            "claim.name": "user_id",
+            "claim.name": "oid",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "ecd91b4d-95d7-4853-95bb-1e8e357606a3",
+          "name": "aud",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "aud",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "aud",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "ecd91b4d-95d7-4853-95bb-1e8e357606a4",
+          "name": "azp",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "azp",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "azp",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "ecd91b4d-95d7-4853-95bb-1e8e357606a5",
+          "name": "name",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "name",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "name",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "ecd91b4d-95d7-4853-95bb-1e8e357606a6",
+          "name": "email",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "email",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "email",
             "jsonType.label": "String"
           }
         },
@@ -1853,51 +1913,25 @@
     {
       "id" : "998182b8-a3a5-436f-a3bf-ea516a9720f3",
       "createdTimestamp" : 1550866246872,
-      "username" : "carol",
+      "username" : "james",
       "credentials" : [{
-         "value" : "carol",
+         "value" : "james",
          "type" : "password"
       }],
       "realmRoles" : [ "offline_access", "uma_authorization" ],
       "enabled" : true,
       "totp" : false,
       "emailVerified" : true,
-      "firstName" : "Carol",
-      "lastName" : "Carolson",
-      "email" : "carol@one.example.com",
+      "firstName" : "James",
+      "lastName" : "McGarr",
+      "email" : "james@one.example.com",
       "attributes" : {
-        "user_id" : [ "328167d1-2da3-5f7a-86d7-96b4376af2c0" ],
-        "tenant_id" : [ "one" ]
-      },
-      "disableableCredentialTypes" : [ "password" ],
-      "requiredActions" : [ ],
-      "notBefore" : 0,
-      "access" : {
-        "manageGroupMembership" : true,
-        "view" : true,
-        "mapRoles" : true,
-        "impersonate" : true,
-        "manage" : true
-      }
-    },
-    {
-      "id" : "3b62fbf2-b0d5-49e4-9e39-0e18486fc8e0",
-      "createdTimestamp" : 1550866796632,
-      "username" : "josh",
-      "credentials" : [{
-         "value" : "josh",
-         "type" : "password"
-      }],
-      "realmRoles" : [ "offline_access", "uma_authorization", "admin" ],
-      "enabled" : true,
-      "totp" : false,
-      "emailVerified" : true,
-      "firstName" : "Josh",
-      "lastName" : "Cummings",
-      "email" : "josh@one.example.com",
-      "attributes" : {
-        "user_id" : [ "219168d2-1da4-4f8a-85d8-95b4377af3c1" ],
-        "tenant_id" : [ "one" ]
+        "tid" : [ "1" ],
+        "oid" : [ "1" ],
+        "aud" : [ "com.jamesmcgarr.worker" ],
+        "azp" : [ "1" ],
+        "name" : [ "James McGarr" ],
+        "email" : [ "james@one.example.com" ]
       },
       "disableableCredentialTypes" : [ "password" ],
       "requiredActions" : [ ],

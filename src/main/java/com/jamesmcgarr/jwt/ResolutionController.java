@@ -24,7 +24,39 @@ public class ResolutionController {
 
 	@GetMapping("/resolutions")
 	public List<Resolution> read(@AuthenticationPrincipal Jwt jwt) {
-		UUID owner = UUID.fromString(jwt.getClaim("user_id"));
+//		UUID owner = UUID.fromString(jwt.getClaim("user_id"));
+		UUID owner = UUID.fromString("328167d1-2da3-5f7a-86d7-96b4376af2c0");
+		System.out.println("-- " + jwt.getClaim("tid"));
+		System.out.println("-- " + jwt.getClaim("oid"));
+		System.out.println("-- " + jwt.getClaim("aud"));
+		System.out.println("-- " + jwt.getClaim("azp"));
+		System.out.println("-- " + jwt.getClaim("name"));
+		System.out.println("-- " + jwt.getClaim("email"));
+		System.out.println(jwt.getClaims());
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
+		System.out.println("***********************************************************" + owner);
 		return this.resolutions.findByOwner(owner);
 	}
 
